@@ -14,6 +14,7 @@
 		5285C34829D46F0D00C5840D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5285C34629D46F0D00C5840D /* Main.storyboard */; };
 		5285C34A29D46F0F00C5840D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5285C34929D46F0F00C5840D /* Assets.xcassets */; };
 		5285C34D29D46F0F00C5840D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5285C34B29D46F0F00C5840D /* LaunchScreen.storyboard */; };
+		5285C35329D46F6D00C5840D /* TextTextureNative in Frameworks */ = {isa = PBXBuildFile; productRef = 5285C35229D46F6D00C5840D /* TextTextureNative */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5285C35329D46F6D00C5840D /* TextTextureNative in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +48,7 @@
 				528435B129D46BFE00E2CD07 /* TextTextureNative */,
 				5285C33C29D46F0D00C5840D /* App */,
 				5285C33B29D46F0D00C5840D /* Products */,
+				5285C35129D46F6D00C5840D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +75,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		5285C35129D46F6D00C5840D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +98,9 @@
 			dependencies = (
 			);
 			name = App;
+			packageProductDependencies = (
+				5285C35229D46F6D00C5840D /* TextTextureNative */,
+			);
 			productName = App;
 			productReference = 5285C33A29D46F0D00C5840D /* App.app */;
 			productType = "com.apple.product-type.application";
@@ -366,6 +379,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5285C35229D46F6D00C5840D /* TextTextureNative */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TextTextureNative;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 528435AA29D46AFA00E2CD07 /* Project object */;
 }
