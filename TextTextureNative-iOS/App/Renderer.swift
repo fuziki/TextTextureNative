@@ -11,6 +11,7 @@
 import Metal
 import MetalKit
 import simd
+import TextTextureNative
 
 // The 256 byte aligned size of our uniform structure
 let alignedUniformsSize = (MemoryLayout<Uniforms>.size + 0xFF) & -0x100
@@ -86,13 +87,36 @@ class Renderer: NSObject, MTKViewDelegate {
             return nil
         }
         
-        do {
-            colorMap = try Renderer.loadTexture(device: device, textureName: "ColorMap")
-        } catch {
-            print("Unable to load texture. Error info: \(error)")
-            return nil
-        }
-        
+//        do {
+//            colorMap = try Renderer.loadTexture(device: device, textureName: "ColorMap")
+//        } catch {
+//            print("Unable to load texture. Error info: \(error)")
+//            return nil
+//        }
+
+//        let uuid = "hoge"
+//        colorMap = TextTextureNativeManager.shared.makeTexture(uuid: uuid, width: 512, height: 512, scale: 3)
+//        TextTextureNativeManager.shared.render(uuid: uuid, text: "Hello, World!", size: 24, color: .white)
+
+        let c1 = """
+{
+    "uuid": "hoge",
+    "width": 512,
+    "height": 512,
+    "scale": 3
+}
+"""
+        let c2 = """
+{
+    "uuid": "hoge",
+    "text": "𩸽ちゃん",
+    "size": 24,
+    "color": "FFFFFFFF"
+}
+"""
+        colorMap = TextTextureNativeManager.shared.makeTexture(config: c1)
+        TextTextureNativeManager.shared.render(config: c2)
+
         super.init()
         
     }
