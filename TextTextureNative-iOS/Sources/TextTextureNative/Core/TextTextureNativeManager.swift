@@ -33,8 +33,8 @@ public class TextTextureNativeManager {
     
     public func makeTexture(uuid: String, width: Int, height: Int, scale: Int) -> MTLTexture {
         let descriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .bgra8Unorm_srgb,
-                                                                  width: 512,
-                                                                  height: 512,
+                                                                  width: width,
+                                                                  height: height,
                                                                   mipmapped: false)
         descriptor.usage = .unknown
         let texture = device.makeTexture(descriptor: descriptor)!

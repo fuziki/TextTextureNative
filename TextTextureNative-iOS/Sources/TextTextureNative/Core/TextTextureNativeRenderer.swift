@@ -1,9 +1,9 @@
 //
 //  TextTextureNativeRenderer.swift
-//  
-//  
+//
+//
 //  Created by fuziki on 2023/03/30
-//  
+//
 //
 
 import Foundation
@@ -16,13 +16,15 @@ class TextTextureNativeRenderer {
     private let texture: MTLTexture
     private let scale: CGFloat
     private let label: UILabel
+    private var previousSize: CGSize?
 
     init(texture: MTLTexture, scale: CGFloat) {
         self.texture = texture
         self.scale = scale
         label = UILabel(frame: .zero)
         label.layer.contentsScale = scale
-        label.backgroundColor = .green
+        label.numberOfLines = 0
+//        label.backgroundColor = .green
     }
 
     func render(text: String, size: CGFloat, color: UIColor) {
@@ -31,14 +33,21 @@ class TextTextureNativeRenderer {
         label.textColor = color
         let frameSize = CGSize(width: CGFloat(texture.width) / scale, height: CGFloat(texture.height) / scale)
         let fitSize = label.sizeThatFits(frameSize)
-        label.frame.size = fitSize
-        let drawWidth = Int(fitSize.width * scale)
-        let drawHeight = Int(fitSize.height * scale)
+        let fixSize: CGSize
+        if let previousSize {
+            fixSize = CGSize(width: max(fitSize.width, previousSize.width),
+                             height: max(fitSize.height, previousSize.height))
+        } else {
+            fixSize = fitSize
+        }
+        label.frame.size = fixSize
+        let drawWidth = Int(fixSize.width * scale)
+        let drawHeight = Int(fixSize.height * scale)
+        previousSize = fitSize
 
         queue.async { [weak self] in
             guard let self else { return }
 
-            let start = Date()
             let cgc = CGContext(data: nil,
                                 width: drawWidth, height: drawHeight,
                                 bitsPerComponent: 8,
@@ -52,8 +61,6 @@ class TextTextureNativeRenderer {
                                  mipmapLevel: 0,
                                  withBytes: cgc.data!,
                                  bytesPerRow: cgc.bytesPerRow)
-
-            print("render time: \(Date().timeIntervalSince(start) * 1000)ms")
         }
     }
 }

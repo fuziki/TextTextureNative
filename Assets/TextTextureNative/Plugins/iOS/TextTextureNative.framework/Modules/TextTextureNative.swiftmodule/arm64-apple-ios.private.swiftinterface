@@ -1,0 +1,30 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TextTextureNative
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Metal
+import MetalKit
+import Swift
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers public class TextTextureNativeManager {
+  public static let shared: TextTextureNative.TextTextureNativeManager
+  public func makeTexture(uuid: Swift.String, width: Swift.Int, height: Swift.Int, scale: Swift.Int) -> Metal.MTLTexture
+  public func render(uuid: Swift.String, text: Swift.String, size: CoreFoundation.CGFloat, color: UIKit.UIColor)
+  public func makeTexture(config: Swift.String) -> Metal.MTLTexture
+  public func render(config: Swift.String)
+  @objc deinit
+}
+public struct TextTextureNative {
+  public var text: Swift.String {
+    get
+  }
+  public init()
+}
+@_cdecl("TextTextureNativeManager_addTwo")
+public func TextTextureNativeManager_addTwo(_ src: Swift.Int64) -> Swift.Int64
+@_cdecl("TextTextureNativeManager_makeTexture")
+public func TextTextureNativeManager_makeTexture(_ config: Swift.UnsafePointer<Swift.CChar>?) -> Swift.UnsafeMutableRawPointer
+@_cdecl("TextTextureNativeManager_render")
+public func TextTextureNativeManager_render(_ config: Swift.UnsafePointer<Swift.CChar>?)
