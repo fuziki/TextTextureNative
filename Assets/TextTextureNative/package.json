@@ -1,5 +1,5 @@
 {
-    "name": "com.github.fuziki.TextTextureNative",
+    "name": "com.github.fuziki.text_texture_native",
     "version": "0.1.0",
     "displayName": "TextTextureNative",
     "description": "This Unity plugin renders text into Texture2D using UIKit.",
