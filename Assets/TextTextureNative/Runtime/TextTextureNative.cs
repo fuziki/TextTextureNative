@@ -2,10 +2,30 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
+#if UNITY_EDITOR_OSX || UNITY_IOS
 namespace TextTextureNative
 {
     public static class TextTextureNativeManager
     {
+#if UNITY_IOS && !UNITY_EDITOR_OSX
+        [Serializable]
+        private class MakeTextureConfig
+        {
+            public string uuid;
+            public int width;
+            public int height;
+            public int scale;
+        }
+
+        [Serializable]
+        private class RenderConfig
+        {
+            public string uuid;
+            public string text;
+            public float size;
+            public string color;
+        }
+
         private const string libName = "__Internal";
         
         [DllImport(libName)]
@@ -16,35 +36,6 @@ namespace TextTextureNative
         
         [DllImport(libName)]
         private static extern void TextTextureNativeManager_render(string config);
-        
-        [Serializable]
-        class MakeTextureConfig
-        {
-            public string uuid;
-			public int width;
-			public int height;
-			public int scale;
-        }
-
-        [Serializable]
-        class RenderConfig
-        {
-            public string uuid;
-			public string text;
-			public float size;
-			public string color;
-        }
-
-        [Serializable]
-        class AppEventMonitorEvent
-        {
-            public string characters;
-        }
-
-        public static long AddTwo(long src)
-        {
-            return TextTextureNativeManager_addTwo(src);
-        }
 
         public static Texture2D MakeTexture(string uuid, int width, int height, int scale)
         {
@@ -68,5 +59,16 @@ namespace TextTextureNative
 			var s = JsonUtility.ToJson(c);
 			TextTextureNativeManager_render(s);
         }
+#else
+        public static Texture2D MakeTexture(string uuid, int width, int height, int scale)
+        {
+            return new Texture2D(width, height);
+        }
+
+        public static void Render(string uuid, string text, float size, Color color)
+        {
+        }
+#endif
     }
 }
+#endif
