@@ -16,7 +16,7 @@ public class Cube : MonoBehaviour
         Debug.Log("Start!!");
         var texture = TextTextureNativeManager.MakeTexture(uuid, 256, 256, 2);
         
-        TextTextureNativeManager.Render(uuid, "𩸽ちゃん", 32, Color.white);
+        TextTextureNativeManager.Render(uuid, "𠮷野家ℒℴѵℯ\n😋🫶🐙", 16, Color.white);
         
         Renderer m_Renderer = GetComponent<Renderer>();
         m_Renderer.material.SetTexture("_MainTex", texture);
@@ -28,7 +28,7 @@ public class Cube : MonoBehaviour
     {
         count = (count + 1) % 100;
         
-        TextTextureNativeManager.Render(uuid, $"𩸽ちゃん{count}", 32, Color.white);
+        TextTextureNativeManager.Render(uuid, $"𠮷野家ℒℴѵℯ\n😋🫶🐙{count}", 16, Color.white);
     }
 
     void OnDestroy()

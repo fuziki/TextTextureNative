@@ -55,7 +55,7 @@ namespace TextTextureNative
 			c.scale = scale;
 			var s = JsonUtility.ToJson(c);
 			var ptr = TextTextureNativeManager_makeTexture(s);
-            return Texture2D.CreateExternalTexture(width, height, TextureFormat.ARGB32, false, false, ptr);
+            return Texture2D.CreateExternalTexture(width, height, TextureFormat.RGBA32, false, false, ptr);
         }
 
         public static void Render(string uuid, string text, float size, Color color)

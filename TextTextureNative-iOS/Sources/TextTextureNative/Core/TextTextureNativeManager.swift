@@ -32,7 +32,7 @@ public class TextTextureNativeManager {
     private var renderers: [String: TextTextureNativeRenderer] = [:]
     
     public func makeTexture(uuid: String, width: Int, height: Int, scale: Int) -> MTLTexture {
-        let descriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .bgra8Unorm_srgb,
+        let descriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .rgba8Unorm,
                                                                   width: width,
                                                                   height: height,
                                                                   mipmapped: false)
