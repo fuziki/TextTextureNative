@@ -57,7 +57,7 @@ class TextTextureNativeRenderer {
             cgc.scaleBy(x: self.scale, y: self.scale)
             self.label.layer.render(in: cgc)
 
-            self.texture.replace(region: MTLRegionMake2D(0, 0, drawWidth, drawHeight),
+            self.texture.replace(region: MTLRegionMake2D(0, self.texture.height - drawHeight, drawWidth, drawHeight),
                                  mipmapLevel: 0,
                                  withBytes: cgc.data!,
                                  bytesPerRow: cgc.bytesPerRow)
