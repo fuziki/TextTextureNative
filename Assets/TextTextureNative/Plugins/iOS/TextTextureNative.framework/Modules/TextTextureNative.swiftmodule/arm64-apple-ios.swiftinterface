@@ -10,8 +10,8 @@ import _Concurrency
 import _StringProcessing
 @_hasMissingDesignatedInitializers public class TextTextureNativeManager {
   public static let shared: TextTextureNative.TextTextureNativeManager
-  public func makeTexture(uuid: Swift.String, width: Swift.Int, height: Swift.Int, scale: Swift.Int) -> Metal.MTLTexture
-  public func render(uuid: Swift.String, text: Swift.String, size: CoreFoundation.CGFloat, color: UIKit.UIColor)
+  public func makeTexture(uuid: Swift.String, width: Swift.Int, height: Swift.Int) -> Metal.MTLTexture
+  public func render(uuid: Swift.String, text: Swift.String, size: CoreFoundation.CGFloat, color: UIKit.UIColor, scale: CoreFoundation.CGFloat)
   public func makeTexture(config: Swift.String) -> Metal.MTLTexture
   public func render(config: Swift.String)
   @objc deinit

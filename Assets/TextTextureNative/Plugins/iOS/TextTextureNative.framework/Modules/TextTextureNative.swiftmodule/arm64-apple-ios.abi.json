@@ -175,56 +175,9 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "scale",
-            "printedName": "scale",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17TextTextureNative04MakeB6ConfigV5scaleSivp",
-            "mangledName": "$s17TextTextureNative04MakeB6ConfigV5scaleSivp",
-            "moduleName": "TextTextureNative",
-            "declAttributes": [
-              "HasStorage"
-            ],
-            "fixedbinaryorder": 3,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17TextTextureNative04MakeB6ConfigV5scaleSivg",
-                "mangledName": "$s17TextTextureNative04MakeB6ConfigV5scaleSivg",
-                "moduleName": "TextTextureNative",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(uuid:width:height:scale:)",
+            "printedName": "init(uuid:width:height:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -249,17 +202,11 @@
                 "name": "Int",
                 "printedName": "Swift.Int",
                 "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17TextTextureNative04MakeB6ConfigV4uuid5width6height5scaleACSS_S3itcfc",
-            "mangledName": "$s17TextTextureNative04MakeB6ConfigV4uuid5width6height5scaleACSS_S3itcfc",
+            "usr": "s:17TextTextureNative04MakeB6ConfigV4uuid5width6heightACSS_S2itcfc",
+            "mangledName": "$s17TextTextureNative04MakeB6ConfigV4uuid5width6heightACSS_S2itcfc",
             "moduleName": "TextTextureNative",
             "implicit": true,
             "init_kind": "Designated"
@@ -538,9 +485,56 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "scale",
+            "printedName": "scale",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17TextTextureNative12RenderConfigV5scaleSfvp",
+            "mangledName": "$s17TextTextureNative12RenderConfigV5scaleSfvp",
+            "moduleName": "TextTextureNative",
+            "declAttributes": [
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 4,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17TextTextureNative12RenderConfigV5scaleSfvg",
+                "mangledName": "$s17TextTextureNative12RenderConfigV5scaleSfvg",
+                "moduleName": "TextTextureNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(uuid:text:size:color:)",
+            "printedName": "init(uuid:text:size:color:scale:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -571,11 +565,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17TextTextureNative12RenderConfigV4uuid4text4size5colorACSS_SSSfSStcfc",
-            "mangledName": "$s17TextTextureNative12RenderConfigV4uuid4text4size5colorACSS_SSSfSStcfc",
+            "usr": "s:17TextTextureNative12RenderConfigV4uuid4text4size5color5scaleACSS_SSSfSSSftcfc",
+            "mangledName": "$s17TextTextureNative12RenderConfigV4uuid4text4size5color5scaleACSS_SSSfSSSftcfc",
             "moduleName": "TextTextureNative",
             "implicit": true,
             "init_kind": "Designated"
@@ -719,7 +719,7 @@
           {
             "kind": "Function",
             "name": "makeTexture",
-            "printedName": "makeTexture(uuid:width:height:scale:)",
+            "printedName": "makeTexture(uuid:width:height:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -744,17 +744,11 @@
                 "name": "Int",
                 "printedName": "Swift.Int",
                 "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17TextTextureNative0abC7ManagerC04makeB04uuid5width6height5scaleSo10MTLTexture_pSS_S3itF",
-            "mangledName": "$s17TextTextureNative0abC7ManagerC04makeB04uuid5width6height5scaleSo10MTLTexture_pSS_S3itF",
+            "usr": "s:17TextTextureNative0abC7ManagerC04makeB04uuid5width6heightSo10MTLTexture_pSS_S2itF",
+            "mangledName": "$s17TextTextureNative0abC7ManagerC04makeB04uuid5width6heightSo10MTLTexture_pSS_S2itF",
             "moduleName": "TextTextureNative",
             "isOpen": true,
             "declAttributes": [
@@ -765,7 +759,7 @@
           {
             "kind": "Function",
             "name": "render",
-            "printedName": "render(uuid:text:size:color:)",
+            "printedName": "render(uuid:text:size:color:scale:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -795,11 +789,17 @@
                 "name": "UIColor",
                 "printedName": "UIKit.UIColor",
                 "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17TextTextureNative0abC7ManagerC6render4uuid4text4size5colorySS_SS14CoreFoundation7CGFloatVSo7UIColorCtF",
-            "mangledName": "$s17TextTextureNative0abC7ManagerC6render4uuid4text4size5colorySS_SS12CoreGraphics7CGFloatVSo7UIColorCtF",
+            "usr": "s:17TextTextureNative0abC7ManagerC6render4uuid4text4size5color5scaleySS_SS14CoreFoundation7CGFloatVSo7UIColorCALtF",
+            "mangledName": "$s17TextTextureNative0abC7ManagerC6render4uuid4text4size5color5scaleySS_SS12CoreGraphics7CGFloatVSo7UIColorCALtF",
             "moduleName": "TextTextureNative",
             "isOpen": true,
             "declAttributes": [
@@ -923,33 +923,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "queue",
-            "printedName": "queue",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "DispatchQueue",
-                "printedName": "Dispatch.DispatchQueue",
-                "usr": "c:objc(cs)OS_dispatch_queue"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17TextTextureNative0abC8RendererC5queue33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo012OS_dispatch_E0Cvp",
-            "mangledName": "$s17TextTextureNative0abC8RendererC5queue33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo012OS_dispatch_E0Cvp",
-            "moduleName": "TextTextureNative",
-            "isInternal": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 0,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
             "name": "texture",
             "printedName": "texture",
             "children": [
@@ -970,66 +943,14 @@
               "HasStorage",
               "AccessControl"
             ],
-            "fixedbinaryorder": 1,
+            "fixedbinaryorder": 0,
             "isLet": true,
             "hasStorage": true
           },
           {
             "kind": "Var",
-            "name": "scale",
-            "printedName": "scale",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17TextTextureNative0abC8RendererC5scale33_DA029C36AEEA31DCF0EA14F12FFD9184LL14CoreFoundation7CGFloatVvp",
-            "mangledName": "$s17TextTextureNative0abC8RendererC5scale33_DA029C36AEEA31DCF0EA14F12FFD9184LL12CoreGraphics7CGFloatVvp",
-            "moduleName": "TextTextureNative",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 2,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
-            "name": "label",
-            "printedName": "label",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UILabel",
-                "printedName": "UIKit.UILabel",
-                "usr": "c:objc(cs)UILabel"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17TextTextureNative0abC8RendererC5label33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo7UILabelCvp",
-            "mangledName": "$s17TextTextureNative0abC8RendererC5label33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo7UILabelCvp",
-            "moduleName": "TextTextureNative",
-            "isInternal": true,
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "fixedbinaryorder": 3,
-            "isLet": true,
-            "hasStorage": true
-          },
-          {
-            "kind": "Var",
-            "name": "previousSize",
-            "printedName": "previousSize",
+            "name": "previousFrameSize",
+            "printedName": "previousFrameSize",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1047,8 +968,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:17TextTextureNative0abC8RendererC12previousSize33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo6CGSizeVSgvp",
-            "mangledName": "$s17TextTextureNative0abC8RendererC12previousSize33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo6CGSizeVSgvp",
+            "usr": "s:17TextTextureNative0abC8RendererC17previousFrameSize33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo6CGSizeVSgvp",
+            "mangledName": "$s17TextTextureNative0abC8RendererC17previousFrameSize33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo6CGSizeVSgvp",
             "moduleName": "TextTextureNative",
             "isInternal": true,
             "declAttributes": [
@@ -1056,13 +977,13 @@
               "HasStorage",
               "AccessControl"
             ],
-            "fixedbinaryorder": 4,
+            "fixedbinaryorder": 1,
             "hasStorage": true
           },
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(texture:scale:)",
+            "printedName": "init(texture:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1075,24 +996,18 @@
                 "name": "MTLTexture",
                 "printedName": "Metal.MTLTexture",
                 "usr": "c:objc(pl)MTLTexture"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGFloat",
-                "printedName": "CoreGraphics.CGFloat",
-                "usr": "s:14CoreFoundation7CGFloatV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:17TextTextureNative0abC8RendererC7texture5scaleACSo10MTLTexture_p_14CoreFoundation7CGFloatVtcfc",
-            "mangledName": "$s17TextTextureNative0abC8RendererC7texture5scaleACSo10MTLTexture_p_12CoreGraphics7CGFloatVtcfc",
+            "usr": "s:17TextTextureNative0abC8RendererC7textureACSo10MTLTexture_p_tcfc",
+            "mangledName": "$s17TextTextureNative0abC8RendererC7textureACSo10MTLTexture_p_tcfc",
             "moduleName": "TextTextureNative",
             "init_kind": "Designated"
           },
           {
             "kind": "Function",
             "name": "render",
-            "printedName": "render(text:size:color:)",
+            "printedName": "render(text:size:color:scale:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1116,11 +1031,17 @@
                 "name": "UIColor",
                 "printedName": "UIKit.UIColor",
                 "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:17TextTextureNative0abC8RendererC6render4text4size5colorySS_14CoreFoundation7CGFloatVSo7UIColorCtF",
-            "mangledName": "$s17TextTextureNative0abC8RendererC6render4text4size5colorySS_12CoreGraphics7CGFloatVSo7UIColorCtF",
+            "usr": "s:17TextTextureNative0abC8RendererC6render4text4size5color5scaleySS_14CoreFoundation7CGFloatVSo7UIColorCAKtF",
+            "mangledName": "$s17TextTextureNative0abC8RendererC6render4text4size5color5scaleySS_12CoreGraphics7CGFloatVSo7UIColorCAKtF",
             "moduleName": "TextTextureNative",
             "isOpen": true,
             "funcSelfKind": "NonMutating"
@@ -1358,7 +1279,7 @@
     {
       "filePath": "\/Users\/macbookpro\/Documents\/home\/projects2020\/xcode\/unity\/NativePlugin\/TextTextureNative\/TextTextureNative-iOS\/Sources\/TextTextureNative\/Core\/TextTextureNativeManager.swift",
       "kind": "Dictionary",
-      "offset": 607,
+      "offset": 609,
       "length": 3,
       "value": "[]"
     },

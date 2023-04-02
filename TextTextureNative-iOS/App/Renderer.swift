@@ -102,16 +102,16 @@ class Renderer: NSObject, MTKViewDelegate {
 {
     "uuid": "hoge",
     "width": 512,
-    "height": 512,
-    "scale": 3
+    "height": 512
 }
 """
         let c2 = """
 {
     "uuid": "hoge",
-    "text": "𩸽ちゃん",
+    "text": "𩸽ちゃん𝓗𝓮𝓵𝓵𝓸𝓦𝓸𝓻𝓵𝓭🐙🪼🫚",
     "size": 24,
-    "color": "FFFFFFFF"
+    "color": "FFFFFFFF",
+    "scale": 2
 }
 """
         colorMap = TextTextureNativeManager.shared.makeTexture(config: c1)

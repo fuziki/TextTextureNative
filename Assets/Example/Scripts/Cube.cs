@@ -17,7 +17,7 @@ public class Cube : MonoBehaviour
     {
         Debug.Log("Start!!");
 
-        var texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512, 2);
+        var texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512);
         
         Renderer m_Renderer = GetComponent<Renderer>();
         m_Renderer.material.SetTexture("_MainTex", texture);
@@ -33,7 +33,7 @@ public class Cube : MonoBehaviour
 
         text.text = str;
 
-        TextTextureNativeManager.Render(uuid, str, 24, Color.white);
+        TextTextureNativeManager.Render(uuid, str, 24, Color.white, 2);
     }
 
     void OnDestroy()
