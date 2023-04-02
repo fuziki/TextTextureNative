@@ -18,12 +18,12 @@ class TextTextureNativeRenderer {
         self.texture = texture
     }
 
-    func render(text: String, size: CGFloat, color: UIColor, scale: CGFloat) {
+    func render(text: String, size: CGFloat, color: T2NColor, scale: CGFloat) {
         let maxFrameWidth = texture.width / Int(scale)
         let maxFrameHeight = texture.height / Int(scale)
 
         let attr: [NSAttributedString.Key : Any] = [
-            .font: UIFont.systemFont(ofSize: size),
+            .font: T2NFont.systemFont(ofSize: size),
             .foregroundColor: color
         ]
         let attributedString = NSAttributedString(string: text, attributes: attr)

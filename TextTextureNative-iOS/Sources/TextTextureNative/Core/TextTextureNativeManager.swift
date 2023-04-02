@@ -45,7 +45,7 @@ public class TextTextureNativeManager {
         return texture
     }
     
-    public func render(uuid: String, text: String, size: CGFloat, color: UIColor, scale: CGFloat) {
+    public func render(uuid: String, text: String, size: CGFloat, color: T2NColor, scale: CGFloat) {
         renderers[uuid]?.render(text: text, size: size, color: color, scale: scale)
     }
     
@@ -64,7 +64,7 @@ public class TextTextureNativeManager {
         let g = CGFloat((hex & 0x00FF0000) >> 16) / 255.0
         let b = CGFloat((hex & 0x0000FF00) >> 8) / 255.0
         let a = CGFloat(hex & 0x000000FF) / 255.0
-        let color = UIColor(red: r, green: g, blue: b, alpha: a)
+        let color = T2NColor(red: r, green: g, blue: b, alpha: a)
         render(uuid: config.uuid, text: config.text, size: CGFloat(config.size), color: color, scale: CGFloat(config.scale))
     }
 }
