@@ -2,12 +2,11 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-#if UNITY_EDITOR_OSX || UNITY_IOS
 namespace TextTextureNative
 {
     public static class TextTextureNativeManager
     {
-#if UNITY_IOS && !UNITY_EDITOR_OSX
+#if UNITY_EDITOR_OSX || UNITY_IOS
         [Serializable]
         private class MakeTextureConfig
         {
@@ -26,8 +25,11 @@ namespace TextTextureNative
             public int scale;
         }
 
+#if !UNITY_EDITOR_OSX
         private const string libName = "__Internal";
-        
+#else
+        private const string libName = "TextTextureNative-macOS";
+#endif
         [DllImport(libName)]
         private static extern long TextTextureNativeManager_addTwo(long src);
         
@@ -71,4 +73,3 @@ namespace TextTextureNative
 #endif
     }
 }
-#endif

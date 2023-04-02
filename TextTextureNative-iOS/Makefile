@@ -15,3 +15,11 @@ framework:
 		BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
 		CONFIGURATION_BUILD_DIR=${BUILD_DIR}
 	rm -r ${TARGET_NAME}.xcodeproj
+
+bundle:
+	xcodebuild \
+		-project ${TARGET_NAME}-iOS.xcodeproj \
+		-scheme ${TARGET_NAME}-macOS \
+		-configuration Release \
+		-sdk macosx \
+		CONFIGURATION_BUILD_DIR=$(CURDIR)/${BUILD_DIR}
