@@ -8,6 +8,11 @@ It is possible to display special characters and emoji.
 
 <img src="docs/example.gif">
 
+# Installation
+## Unity Pakcage Manager (UPM)
+Select "Add package from git URL" in the Unity Package Manager and enter the following path.  
+[https://github.com/fuziki/TextTextureNative.git?path=Assets/TextTextureNative](https://github.com/fuziki/TextTextureNative.git?path=Assets/TextTextureNative)
+
 # Usage
 
 ```c#
