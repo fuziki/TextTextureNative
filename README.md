@@ -10,8 +10,8 @@ It is possible to display special characters and emoji.
 
 # Requirements
 ## Platforms
-* iOS 14+
-* macOS 12+ (Apple Silicon and Intel)
+* iOS 15+
+* macOS 13+ (Apple Silicon and Intel)
 
 # Installation
 ## Unity Pakcage Manager (UPM)
