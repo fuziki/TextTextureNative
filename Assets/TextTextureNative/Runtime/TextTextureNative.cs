@@ -52,7 +52,7 @@ namespace TextTextureNative
 
         public static void Render(string uuid, string text, float size, Color color, int scale)
         {
-			var c = new RenderConfig();
+            var c = new RenderConfig();
 			c.uuid = uuid;
 			c.text = text;
 			c.size = size;

@@ -6,14 +6,18 @@ import Foundation
 import Metal
 import MetalKit
 import Swift
+import UIKit
 import _Concurrency
 import _StringProcessing
+public typealias T2NColor = UIKit.UIColor
+public typealias T2NFont = UIKit.UIFont
 @_hasMissingDesignatedInitializers public class TextTextureNativeManager {
   public static let shared: TextTextureNative.TextTextureNativeManager
   public func makeTexture(uuid: Swift.String, width: Swift.Int, height: Swift.Int) -> Metal.MTLTexture
-  public func render(uuid: Swift.String, text: Swift.String, size: CoreFoundation.CGFloat, color: UIKit.UIColor, scale: CoreFoundation.CGFloat)
+  public func render(uuid: Swift.String, text: Swift.String, size: CoreFoundation.CGFloat, color: TextTextureNative.T2NColor, scale: CoreFoundation.CGFloat)
   public func makeTexture(config: Swift.String) -> Metal.MTLTexture
   public func render(config: Swift.String)
+  public func removeAll()
   @objc deinit
 }
 public struct TextTextureNative {
@@ -28,3 +32,5 @@ public func TextTextureNativeManager_addTwo(_ src: Swift.Int64) -> Swift.Int64
 public func TextTextureNativeManager_makeTexture(_ config: Swift.UnsafePointer<Swift.CChar>?) -> Swift.UnsafeMutableRawPointer
 @_cdecl("TextTextureNativeManager_render")
 public func TextTextureNativeManager_render(_ config: Swift.UnsafePointer<Swift.CChar>?)
+@_cdecl("TextTextureNativeManager_removeAll")
+public func TextTextureNativeManager_removeAll()

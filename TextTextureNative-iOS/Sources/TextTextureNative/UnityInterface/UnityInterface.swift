@@ -27,3 +27,8 @@ public func TextTextureNativeManager_render(_ config: UnsafePointer<CChar>?) {
     guard let config else { return }
     TextTextureNativeManager.shared.render(config: String(cString: config))
 }
+
+@_cdecl("TextTextureNativeManager_removeAll")
+public func TextTextureNativeManager_removeAll() {
+    TextTextureNativeManager.shared.removeAll()
+}

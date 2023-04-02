@@ -32,6 +32,10 @@ public class TextTextureNativeManager {
     private var renderers: [String: TextTextureNativeRenderer] = [:]
     
     public func makeTexture(uuid: String, width: Int, height: Int) -> MTLTexture {
+        if let renderer = renderers[uuid] {
+            return renderer.texture
+        }
+
         let descriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .rgba8Unorm,
                                                                   width: width,
                                                                   height: height,
@@ -66,5 +70,9 @@ public class TextTextureNativeManager {
         let a = CGFloat(hex & 0x000000FF) / 255.0
         let color = T2NColor(red: r, green: g, blue: b, alpha: a)
         render(uuid: config.uuid, text: config.text, size: CGFloat(config.size), color: color, scale: CGFloat(config.scale))
+    }
+    
+    public func removeAll() {
+        renderers.removeAll()
     }
 }

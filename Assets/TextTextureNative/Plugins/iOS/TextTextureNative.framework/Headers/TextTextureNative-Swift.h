@@ -257,6 +257,9 @@ SWIFT_EXTERN int64_t TextTextureNativeManager_addTwo(int64_t src) SWIFT_WARN_UNU
 SWIFT_EXTERN void * _Nonnull TextTextureNativeManager_makeTexture(char const * _Nullable config) SWIFT_WARN_UNUSED_RESULT;
 
 
+SWIFT_EXTERN void TextTextureNativeManager_removeAll(void);
+
+
 SWIFT_EXTERN void TextTextureNativeManager_render(char const * _Nullable config);
 
 #endif

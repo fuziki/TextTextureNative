@@ -6,6 +6,13 @@
     "children": [
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "TextTextureNative"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -863,6 +870,27 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "removeAll",
+            "printedName": "removeAll()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17TextTextureNative0abC7ManagerC9removeAllyyF",
+            "mangledName": "$s17TextTextureNative0abC7ManagerC9removeAllyyF",
+            "moduleName": "TextTextureNative",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -934,18 +962,41 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:17TextTextureNative0abC8RendererC7texture33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo10MTLTexture_pvp",
-            "mangledName": "$s17TextTextureNative0abC8RendererC7texture33_DA029C36AEEA31DCF0EA14F12FFD9184LLSo10MTLTexture_pvp",
+            "usr": "s:17TextTextureNative0abC8RendererC7textureSo10MTLTexture_pvp",
+            "mangledName": "$s17TextTextureNative0abC8RendererC7textureSo10MTLTexture_pvp",
             "moduleName": "TextTextureNative",
-            "isInternal": true,
             "declAttributes": [
               "Final",
-              "HasStorage",
-              "AccessControl"
+              "HasStorage"
             ],
             "fixedbinaryorder": 0,
             "isLet": true,
-            "hasStorage": true
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MTLTexture",
+                    "printedName": "Metal.MTLTexture",
+                    "usr": "c:objc(pl)MTLTexture"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17TextTextureNative0abC8RendererC7textureSo10MTLTexture_pvg",
+                "mangledName": "$s17TextTextureNative0abC8RendererC7textureSo10MTLTexture_pvg",
+                "moduleName": "TextTextureNative",
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent",
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Var",
@@ -1265,6 +1316,27 @@
         "declKind": "Func",
         "usr": "c:(cm)TextTextureNativeManager_render:",
         "mangledName": "$s17TextTextureNative0abC14Manager_renderyySPys4Int8VGSgF",
+        "moduleName": "TextTextureNative",
+        "declAttributes": [
+          "AccessControl",
+          "CDecl"
+        ],
+        "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Function",
+        "name": "TextTextureNativeManager_removeAll",
+        "printedName": "TextTextureNativeManager_removeAll()",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Void",
+            "printedName": "()"
+          }
+        ],
+        "declKind": "Func",
+        "usr": "c:(cm)TextTextureNativeManager_removeAll",
+        "mangledName": "$s17TextTextureNative0abC17Manager_removeAllyyF",
         "moduleName": "TextTextureNative",
         "declAttributes": [
           "AccessControl",

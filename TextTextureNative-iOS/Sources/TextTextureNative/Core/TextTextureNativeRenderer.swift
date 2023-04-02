@@ -11,7 +11,7 @@ import Metal
 import MetalKit
 
 class TextTextureNativeRenderer {
-    private let texture: MTLTexture
+    let texture: MTLTexture
     private var previousFrameSize: CGSize?
 
     init(texture: MTLTexture) {
@@ -44,6 +44,8 @@ class TextTextureNativeRenderer {
         let drawWidth = min(Int(fixFrameSize.width * scale), texture.width)
         let drawHeight = min(Int(fixFrameSize.height * scale), texture.height)
         previousFrameSize = fitFrameSize
+        
+        if drawWidth == 0 || drawHeight == 0 { return }
 
         let context = CGContext(data: nil,
                                 width: drawWidth, height: drawHeight,
