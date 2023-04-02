@@ -8,6 +8,11 @@ It is possible to display special characters and emoji.
 
 <img src="docs/example.gif">
 
+# Requirements
+## Platforms
+* iOS 14+
+* macOS 12+ (Apple Silicon and Intel)
+
 # Installation
 ## Unity Pakcage Manager (UPM)
 Select "Add package from git URL" in the Unity Package Manager and enter the following path.  
