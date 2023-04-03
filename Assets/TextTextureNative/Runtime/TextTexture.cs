@@ -19,7 +19,7 @@ namespace TextTextureNative
         [SerializeField]
         string m_Text = "Text";
 
-        private string latestText = "Text";
+        private string latestText = "";
 
         private Texture texture = null;
 
@@ -35,9 +35,12 @@ namespace TextTextureNative
 #if UNITY_EDITOR
         protected override void OnValidate()
         {
-            if (texture == null)
-                texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512);
-            TextTextureNativeManager.Render(uuid, m_Text, 24, Color.red, 2);
+            if (latestText != m_Text)
+            {
+                if (texture == null)
+                    texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512);
+                TextTextureNativeManager.Render(uuid, m_Text, 24, Color.red, 2);
+            }
         }
 #endif
 
@@ -67,6 +70,28 @@ namespace TextTextureNative
             vh.AddTriangle(0, 1, 2);
             vh.AddTriangle(2, 3, 0);
         }
+
+#if UNITY_EDITOR
+        [MenuItem("GameObject/TextTextureNative/TextTexture", false, 999)]
+        private static void Create(MenuCommand menuCommand)
+        {
+            var parent = Selection.activeGameObject?.transform;
+            if (parent.GetComponentInParent<Canvas>() == null) return;
+
+            var go = new GameObject("TextTexture");
+            go.layer = 5; // UI
+
+            var t = go.AddComponent<RectTransform>();
+
+            t.SetParent(parent);
+            t.sizeDelta = new Vector2(512, 512);
+            t.anchoredPosition = Vector2.zero;
+
+            Selection.activeGameObject = go;
+
+            go.AddComponent<TextTexture>();
+        }
+#endif
     }
 
 #if UNITY_EDITOR
