@@ -8,16 +8,16 @@ using UnityEditor.UI;
 namespace TextTextureNative
 {
     // Beta
-	[ExecuteAlways]
-	[RequireComponent(typeof(CanvasRenderer))]
-	[AddComponentMenu("UTextTextureNative/TextTexture", 100)]
-	public class TextTexture : MaskableGraphic
-	{
+    [ExecuteAlways]
+    [RequireComponent(typeof(CanvasRenderer))]
+    [AddComponentMenu("TextTextureNative/UI/NativeRenderText", 100)]
+    public class NativeRenderText : MaskableGraphic
+    {
         private string uuid = System.Guid.NewGuid().ToString();
 
         [TextArea(3, 10)]
         [SerializeField]
-        string m_Text = "Text";
+        string m_Text = "NativeRenderText";
 
         private string latestText = "";
 
@@ -72,14 +72,16 @@ namespace TextTextureNative
         }
 
 #if UNITY_EDITOR
-        [MenuItem("GameObject/TextTextureNative/TextTexture", false, 999)]
+        [MenuItem("GameObject/TextTextureNative/UI/NativeRenderText", false, 999)]
         private static void Create(MenuCommand menuCommand)
         {
             var parent = Selection.activeGameObject?.transform;
             if (parent.GetComponentInParent<Canvas>() == null) return;
 
-            var go = new GameObject("TextTexture");
-            go.layer = 5; // UI
+            var go = new GameObject("NativeRenderText")
+            {
+                layer = 5 // UI
+            };
 
             var t = go.AddComponent<RectTransform>();
 
@@ -89,13 +91,13 @@ namespace TextTextureNative
 
             Selection.activeGameObject = go;
 
-            go.AddComponent<TextTexture>();
+            go.AddComponent<NativeRenderText>();
         }
 #endif
     }
 
 #if UNITY_EDITOR
-    [CustomEditor(typeof(TextTexture), true)]
+    [CustomEditor(typeof(NativeRenderText), true)]
     [CanEditMultipleObjects]
     public class TextTextureEditor : GraphicEditor
     {

@@ -11,7 +11,7 @@ public class Cube : MonoBehaviour
     private string uuid = "hoge";
 
     private int count = 0;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class Cube : MonoBehaviour
         image2.sprite = Sprite.Create(texture2, new Rect(0, 0, texture2.width, texture2.height), Vector2.zero);
 
         var texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512);
-        
+
         Renderer m_Renderer = GetComponent<Renderer>();
         m_Renderer.material.SetTexture("_MainTex", texture);
 
