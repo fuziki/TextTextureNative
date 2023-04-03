@@ -8,6 +8,11 @@ It is possible to display special characters and emoji.
 
 <img src="docs/example.gif">
 
+# Requirements
+## Platforms
+* iOS 15+
+* macOS 13+ (Apple Silicon and Intel)
+
 # Installation
 ## Unity Pakcage Manager (UPM)
 Select "Add package from git URL" in the Unity Package Manager and enter the following path.  
@@ -18,7 +23,7 @@ Select "Add package from git URL" in the Unity Package Manager and enter the fol
 ```c#
 var uuid = "hoge"
 
-var texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512, 2);
+var texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512);
 
-TextTextureNativeManager.Render(uuid, "𝕳𝖊𝖑𝖑𝖔𝖂𝖔𝖗𝖑𝖉\n𝓗𝓮𝓵𝓵𝓸𝓦𝓸𝓻𝓵𝓭\n🐙🪼🫚", 24, Color.white);
+TextTextureNativeManager.Render(uuid, "𝕳𝖊𝖑𝖑𝖔𝖂𝖔𝖗𝖑𝖉\n𝓗𝓮𝓵𝓵𝓸𝓦𝓸𝓻𝓵𝓭\n🐙🪼🫚", 24, Color.white, 2);
 ```
