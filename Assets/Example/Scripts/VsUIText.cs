@@ -2,10 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TextTextureNative;
 
-public class Cube : MonoBehaviour
+public class VsUIText : MonoBehaviour
 {
     public Image image;
-    public Image image2;
     public Text text;
 
     private string uuid = "hoge";
@@ -16,10 +15,6 @@ public class Cube : MonoBehaviour
     void Start()
     {
         Debug.Log("Start!!");
-
-        var texture2 = TextTextureNativeManager.MakeTexture("hoge4", 512, 512);
-        TextTextureNativeManager.Render("hoge4", "FugaFuga\n", 24, Color.white, 2);
-        image2.sprite = Sprite.Create(texture2, new Rect(0, 0, texture2.width, texture2.height), Vector2.zero);
 
         var texture = TextTextureNativeManager.MakeTexture(uuid, 512, 512);
 
@@ -43,10 +38,5 @@ public class Cube : MonoBehaviour
     void OnDestroy()
     {
         Debug.Log("Stop!!");
-    }
-
-    private void OnKeyDown(string key)
-    {
-        Debug.Log($"OnKeyDown: {key}");
     }
 }

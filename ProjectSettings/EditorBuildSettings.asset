@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Example/Scenes/SampleScenes.unity
+    guid: 5df4aa29ebbe34a2f99628c1c3e6c39b
+  - enabled: 1
+    path: Assets/Example/Scenes/VsUIText.unity
+    guid: 5d5055d82384d4f36807cf236f8f927f
+  - enabled: 1
+    path: Assets/Example/Scenes/NativeRenderTextSample.unity
+    guid: bda07e64d7b7b4edd827f10a9cadb7db
+  - enabled: 1
+    path: Assets/Example/Scenes/MultipleRendering.unity
+    guid: 06b4f6ba8976241e48ae919ff61c0937
   m_configObjects: {}
