@@ -3,7 +3,7 @@
 ![Unity](https://img.shields.io/badge/unity-2022-green.svg)
 ![Xode](https://img.shields.io/badge/xcode-xcode14-green.svg)
 
-This Unity plugin renders text into Texture2D using UIKit.  
+Unity plugin for rendering text in Texture2D using [Core Text](https://developer.apple.com/documentation/coretext).  
 It is possible to display special characters and emoji.
 
 <img src="docs/example.gif">
